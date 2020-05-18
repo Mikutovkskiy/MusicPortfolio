@@ -1,0 +1,178 @@
+@media (max-width: 320px){
+
+    .header__left-texture {
+        display: none;
+    }
+
+    hr{
+        width: 300px!important;
+        margin-top: 40px!important;
+        margin-bottom: 40px!important;
+    }
+
+    .work__title{
+        font-size: 40px;
+    }
+
+    .work__img-inner{
+        margin: 0px!important;
+    }
+
+    .work__left-texture, .work__right-texture, .work__number-texture, .contacts-texture{
+        display: none;
+    }
+
+    .work__content-inner{
+        padding-left: 10px!important;
+    }
+
+    .work__playlist-inner{
+        /* display: block!important; */
+        flex-direction: column;
+    }
+
+    .sort{
+        order: -1;
+    }
+
+    .work__btn{
+        display: none;
+    }
+
+    header {
+        height: 700px;
+    }
+
+    .header__menu{
+        display: none!important;
+    }
+
+    .hamburger-shell{
+        display: inline-block!important;
+    }
+
+    .header__right-texture {
+        display: none;
+    }
+
+    .header__main-title {
+        font-size: 52px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header__main-subtitle {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .header__offer {
+        margin-top: 80px;
+    }
+
+    .header__scroll-info {
+        font-size: 13px;
+    }
+
+    .header__btn-inner {
+        right: 20%;
+        top: 70%;
+    }
+
+    .header__prompt-scroll-inner{
+        display: none;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 450px) {
+.header__left-texture {
+        display: none;
+    }
+
+    hr{
+        width: 300px!important;
+        margin-top: 40px!important;
+        margin-bottom: 40px!important;
+    }
+
+    .work__title{
+        font-size: 40px;
+    }
+
+    .work__img-inner{
+        margin: 0px!important;
+    }
+
+    .work__left-texture, .work__right-texture, .work__number-texture, .contacts-texture{
+        display: none;
+    }
+
+    .work__content-inner{
+        padding-left: 10px!important;
+    }
+
+    .work__playlist-inner{
+        /* display: block!important; */
+        flex-direction: column;
+    }
+
+    .sort{
+        order: -1;
+    }
+
+    .work__btn{
+        display: none;
+    }
+
+    header {
+        height: 700px;
+    }
+
+    .header__menu{
+        display: none!important;
+    }
+
+    .hamburger-shell{
+        display: inline-block!important;
+    }
+
+    .header__right-texture {
+        display: none;
+    }
+
+    .header__main-title {
+        font-size: 52px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header__main-subtitle {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .header__offer {
+        margin-top: 100px;
+    }
+
+    .header__scroll-info {
+        font-size: 13px;
+    }
+
+    .header__btn-inner {
+        right: 25%;
+        top: 60%;
+    }
+
+    .header__prompt-scroll-inner{
+        display: none;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}

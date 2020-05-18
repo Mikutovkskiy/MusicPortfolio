@@ -1,0 +1,502 @@
+a,
+a:hover {
+    text-decoration: none !important;
+    color: #dadada;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+input:active,
+textarea:active {
+    outline: none;
+}
+
+:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button a {
+    color: white;
+}
+
+body {
+    color: white;
+    font-family: 'Gilroy';
+    font-weight: bold;
+    line-height: 2;
+    user-select: none;
+}
+
+header {
+    height: 895px;
+    background-color: #212121;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #3c3a3a;
+    background-size: cover;
+    transition: 1.5s all;
+    opacity: 0;
+}
+
+/*hamburger start*/
+
+.hamburger-shell {
+    background-color: rgb(206, 206, 206);
+    border-radius: 5px;
+    display: none;
+    margin-top: 20px;
+    position: fixed;
+    overflow: hidden;
+    width: 80px;
+    height: 60px;
+    padding-left: 15px;
+    margin-left: 30px;
+    overflow: auto;
+    left: calc(100% - 100px);
+    z-index: 1000;
+    top: 5px;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.hamburger-shell-stretch {
+    margin-top: -10px;
+}
+
+/*две линии гамбургер*/
+.top,
+.middle {
+    position: absolute;
+    width: 62px;
+    height: 2px;
+    background-color: white;
+    transition: all 350ms ease-in-out;
+    top: 20px;
+    width: 45px;
+}
+
+.middle {
+    top: 40px;
+    width: 45px;
+}
+
+#menu {
+    position: fixed;
+    margin-top: 30px;
+    left: calc(100% - 492px);
+    top: 70px;
+    display: none;
+    background-color: #fff;
+    padding: 24px;
+    width: 500px;
+    height: 350px;
+    text-align: right;
+    z-index: 200;
+    -webkit-transition: all 1s;
+    transition: all 0.8s;
+}
+
+
+#menu a li {
+    color: #0c0b0b;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none !important;
+    padding: 20px;
+    list-style: none;
+    color: #0c0b0b;
+    transition-duration: .5s;
+}
+
+#menu a li:hover {
+    color: #0c0b0b;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+.rotate {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    top: 30px;
+    background-color: white;
+    height: 2px;
+    width: 45px;
+}
+
+.rotate-back {
+    transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    top: 30px;
+    background-color: white;
+    height: 2px;
+    width: 45px;
+}
+
+.top {
+    -webkit-animation-delay: 100ms;
+}
+
+.middle {
+    -webkit-animation-delay: 250ms;
+}
+
+.bottom {
+    -webkit-animation-delay: 400ms;
+}
+
+/*стиль для скролл бара*/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #666;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #999;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #666;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #999;
+}
+
+::-webkit-resizer {
+    background-color: #666;
+}
+
+/*hamburger end*/
+
+.lang-hide {
+    display: none;
+}
+
+button .btn {
+    border: none;
+    z-index: 1000 !important;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header__left-texture img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+.header__right-texture img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 1030px;
+    height: 800px;
+    right: 0%;
+    bottom: 0;
+}
+
+.header__btn-inner {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+}
+
+.title {
+    color: white;
+}
+
+.play {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.header__language_switcher input[type="radio"] {
+    display: none;
+}
+
+.header__language_switcher input[type="radio"]+label {
+    color: #292321;
+    font-weight: 300;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-top: 35px;
+    transition: all 1s;
+}
+
+.header__language_switcher-stretch input[type="radio"]+label {
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 15px;
+}
+
+.header__language_switcher input[type="radio"]+label span {
+    display: inline-block;
+    text-transform: uppercase;
+    width: 30px;
+    height: 35px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+
+.header__language_switcher input[type="radio"]:checked+label span {
+
+    font-weight: 700;
+    color: #fff
+}
+
+.header__menu li {
+    padding-top: 35px;
+    padding-left: 40px;
+    list-style-type: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #dadada;
+    cursor: pointer;
+}
+
+.header__menu-active {
+    color: #fff !important;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+h1 {
+    font-size: 72px;
+    color: white;
+}
+
+.header__offer {
+    margin-top: 220px;
+}
+
+.header__main-title {
+    font-size: 68px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header__main-subtitle {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 300;
+    padding: 0px;
+}
+
+.header__prompt-scroll-inner {
+    cursor: pointer;
+    transition: 0.6 all;
+    width: 50px;
+}
+
+.header__text-color {
+    color: #e91e63;
+}
+
+.header__scroll-info {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.2;
+    width: 40px;
+}
+
+section .work {
+    position: relative;
+}
+
+.work__left-texture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+}
+
+.work__right-texture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+}
+
+.work__title {
+    padding: 70px 0px 70px 0px;
+    color: #202020;
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.work__suptitle-bg-element {
+    background-color: #e72063;
+    width: 80px;
+    height: 15px;
+    position: absolute;
+    z-index: -1;
+    margin-top: 23px;
+}
+
+.work__suptitle {
+    padding-left: 5px;
+    color: #363535;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.work__text {
+    color: #505050;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.work__btn {
+    background-color: #fff;
+    width: 150px;
+    height: 50px;
+    background-color: #e72063;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 0px;
+    transition: 0.8s all;
+}
+
+.work__btn:hover {
+    box-shadow: -6.894px 5.785px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.work__item-3 {
+    margin-bottom: 85px;
+}
+
+.contacts {
+    background-color: #212121;
+    padding-bottom: 90px;
+}
+
+input,
+textarea {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 5px;
+    border: 0px;
+    resize: none;
+}
+
+.contacts__text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d8d8d8;
+    padding-bottom: 20px;
+}
+
+.contacts__mail,
+.contacts__number {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+.contacts__mail::before {
+    content: url(/img/icons/mail.png);
+    padding-right: 15px;
+}
+
+.contacts__number::before {
+    content: url(/icons/phone.png);
+    padding-right: 15px;
+}
+
+.contacts__inner a span {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.26);
+    transition-duration: .4s;
+}
+
+.contacts__inner a span:hover {
+    border-bottom: 1px solid rgba(209, 209, 209, 0.836);
+}
+
+.contacts__inner a:hover {
+    text-decoration: none;
+}
+
+.contacts__social-title {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.contacts-texture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 10%;
+    padding-top: 50px;
+}
+
+footer {
+    color: #e8e8e8;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 15px 0px 15px 0px;
+    background-color: #151515;
+}
