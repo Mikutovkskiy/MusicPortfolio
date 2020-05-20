@@ -41,12 +41,6 @@ btn.addEventListener("click", function () {
   }
 })
 
-$(document).ready(function () {
-  $("#menu a").click(function () {
-    $(this).css('color', 'red');
-  });
-});
-
 $('#radio01').click(function () {
   $('.eng-text').removeClass('lang-hide');
   $('.eng-text').addClass('lang-show');
@@ -87,8 +81,7 @@ $(document).ready(function () {
   });
 });
 
-
-var typed3 = new Typed('.header__genres-eng', {
+let typedEng = new Typed('.header__genres-eng', {
   strings: [
     'films..',
     'shorts..',
@@ -97,12 +90,11 @@ var typed3 = new Typed('.header__genres-eng', {
   ],
   typeSpeed: 60,
   backSpeed: 60,
-  smartBackspace: true, // this is a default
+  smartBackspace: true,
   loop: true
 });
 
-//russian lang
-var typed3 = new Typed('.header__genres-ru', {
+let typedRu = new Typed('.header__genres-ru', {
   strings: [
     'фильмов..',
     'shorts..',
@@ -111,6 +103,6 @@ var typed3 = new Typed('.header__genres-ru', {
   ],
   typeSpeed: 60,
   backSpeed: 60,
-  smartBackspace: true, // this is a default
+  smartBackspace: true,
   loop: true
 });

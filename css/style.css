@@ -245,13 +245,7 @@ button .btn {
     height: 800px;
     right: 0%;
     bottom: 0;
-    z-index: 1;
-}
-
-.header__btn-inner {
-    position: absolute;
-    right: 15%;
-    top: 50%;
+    /* z-index: 1; */
 }
 
 .title {
@@ -344,9 +338,9 @@ h1 {
 }
 
 .header__prompt-scroll-inner {
+    width: 100%;
     cursor: pointer;
     transition: 0.6 all;
-    width: 50px;
 }
 
 .header__text-color {
@@ -409,6 +403,10 @@ section .work {
     font-size: 22px;
     line-height: 1.2;
     font-weight: 500;
+}
+
+.header__btn-inner{
+    margin-right: -150px;
 }
 
 .work__btn {
