@@ -22,12 +22,11 @@
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Thin.eot');
-    src: local('../fonts/Gilroy Thin'), local('Gilroy-Thin'),
-        url('../fonts/Gilroy-Thin.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Gilroy-Thin.woff') format('woff'),
-        url('../fonts/Gilroy-Thin.ttf') format('truetype');
-    font-weight: 100;
+    src: url('../fonts/Gilroy-Light.eot');
+    src: local('../fonts/Gilroy Light'), local('Gilroy-Light'),
+        url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Light.woff') format('woff'),
+        url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
-

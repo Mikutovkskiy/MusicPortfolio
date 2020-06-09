@@ -1,73 +1,33 @@
 //player logic
-var wow = new WOW;
+let wow = new WOW;
 wow.init();
 
-let video = document.getElementById("video");
-let pauseButton = document.querySelector("#action-video button");
-let btn = document.querySelector(".btn");
-let menu = document.querySelector(".header__menu");
-
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-  video.removeAttribute("autoplay");
-  video.pause();
-  pauseButton.innerHTML = "Paused";
-}
-
-function vidFade() {
-  video.classList.add("stopfade");
-}
-
-video.addEventListener('ended', function () {
-  video.pause();
-  videoFade();
+SmoothScroll({
+  stepSize: 40
 });
 
-btn.addEventListener("click", function () {
-  video.classList.toggle("stopfade");
-  if (video.paused) {
-    video.play();
-    setTimeout(function () {
-      video.style.opacity = '1';
-    }, 500);
-    video.style.zIndex = '1';
-    btn.innerHTML = "<img class='play' src='/img/pause.png' alt=''>";
-  } else {
-    video.pause();
-    btn.innerHTML = "<img class='play' src='/img/play.png' alt=''>";
-    video.style.opacity = '0';
-    setTimeout(function () {
-      video.style.zIndex = '-1';
-    }, 1000);
-  }
-})
-
+//lang swithcer
 $('#radio01').click(function () {
-  $('.eng-text').removeClass('lang-hide');
-  $('.eng-text').addClass('lang-show');
+  $('.eng-text').removeClass('lang-hide').addClass('lang-show');
   $('.rus-text').addClass('lang-hide');
   $('#InputEmail').attr("placeholder", "Type your mail..");
   $('#InputText').attr("placeholder", "Type your message..");
-  $('.button-submit').removeClass('rus-button');
-  $('.button').removeClass('rus-button');
 });
 
 $('#radio02').click(function () {
-  $('.eng-text').removeClass('lang-show');
-  $('.eng-text').addClass('lang-hide');
+  $('.eng-text').removeClass('lang-show').addClass('lang-hide');
   $('.rus-text').removeClass('lang-hide');
   $('#InputEmail').attr("placeholder", "Введите mail..");
   $('#InputText').attr("placeholder", "Введите свое сообщение..");
-  $('.button-submit').addClass('rus-button');
-  $('.button').addClass('rus-button');
 });
 
-var $page = $('html, body');
+let $page = $('html, body');
 $('a[href*="#"]').click(function () {
   $('.header__menu a.header__menu-active').removeClass('header__menu-active');
   $(this).addClass('header__menu-active');
   $page.animate({
     scrollTop: $($.attr(this, 'href')).offset().top
-  }, 800);
+  }, 1300);
   return false;
 });
 
@@ -105,4 +65,36 @@ let typedRu = new Typed('.header__genres-ru', {
   backSpeed: 60,
   smartBackspace: true,
   loop: true
+});
+
+jQuery(document).ready(function ($) {
+  $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    prevArrow: '<img class="slick-next" src="/img/left.svg" alt="">',
+    nextArrow: '<img class="slick-prev" src="/img/right.svg" alt="">',
+
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+    responsive: [{
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 });

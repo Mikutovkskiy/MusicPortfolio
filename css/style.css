@@ -1,3 +1,13 @@
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: 1s all;
+    z-index: -1;
+}
+
 a,
 a:hover {
     text-decoration: none !important;
@@ -43,21 +53,6 @@ header {
     height: 895px;
     background-color: #212121;
     position: relative;
-}
-
-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    max-height: 100%;
-    z-index: -1;
-    transform: translateX(-50%) translateY(-50%);
-    background-color: #3c3a3a;
-    background-size: cover;
-    transition: 1.5s all;
-    opacity: 0;
 }
 
 hr {
@@ -237,7 +232,8 @@ button .btn {
     left: 0;
 }
 
-.header__right-texture img {
+.header__right-texture img,
+.header__right-img img {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -245,7 +241,6 @@ button .btn {
     height: 800px;
     right: 0%;
     bottom: 0;
-    /* z-index: 1; */
 }
 
 .title {
@@ -331,6 +326,7 @@ h1 {
 }
 
 .header__main-subtitle {
+    font-family: 'Gilroy';
     font-size: 35px;
     line-height: 1.2;
     font-weight: 300;
@@ -386,17 +382,20 @@ section .work {
     width: 80px;
     height: 15px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     margin-top: 23px;
 }
 
 .work__suptitle {
+    position: relative;
     padding-left: 5px;
     color: #363535;
     font-size: 32px;
     font-weight: bold;
     line-height: 1.2;
+    z-index: 2;
 }
+
 
 .work__text {
     color: #505050;
@@ -405,7 +404,7 @@ section .work {
     font-weight: 500;
 }
 
-.header__btn-inner{
+.header__btn-inner {
     margin-right: -150px;
 }
 
@@ -419,6 +418,15 @@ section .work {
     border-radius: 25px;
     border: 0px;
     transition: 0.8s all;
+}
+
+.work__btn_ghost {
+    background-color: transparent;
+    border: 1px solid #e72063;
+}
+
+.work__btn_ghost:hover {
+    background-color: #e72063;
 }
 
 .work__btn:hover {
@@ -465,10 +473,6 @@ textarea {
     padding-right: 15px;
 }
 
-.contacts__number::before {
-    content: url(/icons/phone.png);
-    padding-right: 15px;
-}
 
 .contacts__inner a span {
     border-bottom: 1px solid rgba(209, 209, 209, 0.26);
@@ -488,12 +492,157 @@ textarea {
     color: #ffffff;
 }
 
+.social-icons-inner {
+    padding-left: 0px;
+}
+
+.social-icons-inner a {
+    padding-right: 40px;
+    font-size: 28px;
+}
+.social-icons-inner a span, .social-icons-inner a span:hover{
+    border: none;
+}
+
+.social-icons-inner a:hover{
+    color: #e72063;
+}
+
 .contacts-texture {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     left: 10%;
     padding-top: 50px;
+}
+
+.albums {
+    background-color: #212121;
+}
+
+
+.albums__item img {
+    font-size: 72px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    line-height: 270px;
+    width: 100%;
+    height: 250px;
+    margin: 5px;
+    transition: all 0.6s;
+    border-radius: 5px;
+}
+
+.albums__item :hover {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background-color: rgb(233, 30, 99);
+    ;
+    /* opacity: 0.5; */
+}
+
+
+.albums__inner:nth-child(3) {
+    margin-left: 0px;
+}
+
+.album {
+    background-color: #212121;
+    padding-bottom: 90px;
+}
+
+.album__img {
+    width: 80%;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+.slider {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 350px;
+}
+
+.slider__item {
+    padding-bottom: 50px;
+}
+
+.slider__item img {
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    margin: 0px !important;
+}
+
+.slider__item a {
+    color: #292829 !important;
+    text-decoration: none;
+}
+
+.slick-prev,
+.slick-next {
+    width: 70px;
+    height: 45px;
+    position: absolute;
+    top: 120px;
+    z-index: 1000;
+}
+
+.slick-next {
+    position: absolute;
+    left: 0%;
+}
+
+.slick-prev {
+    left: 94%;
+    right: 0%;
+}
+
+
+.slider__text {
+    padding-top: 30px;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.slider__autor {
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 42px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots {
+    padding-bottom: 40px;
+}
+
+.modal-title {
+    color: black;
+}
+
+.donation-img {
+    width: 20%;
+    height: auto;
 }
 
 footer {

@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/fade926422/UntitledProject/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/hover-min.css">
-    <link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/media.css">
     <title>Aleksey Music</title>
 </head>
 
 <body>
     <header id="main">
-        <video preload="none" id="video" playsinline loop muted>
+        <video muted loop id="myVideo">
             <source src="/y2mate.com - Excalibur (Celtic battle music)__Dt1dXVbwZM_1080p.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
         </video>
+        <!-- <video preload="none" id="video" playsinline loop muted>
+            <source src="/y2mate.com - Excalibur (Celtic battle music)__Dt1dXVbwZM_1080p.mp4" type="video/mp4">
+        </video> -->
         <div class="header__left-texture">
             <img src="/img/texture/left texture.png" alt="">
         </div>
-        <div class="header__right-texture">
+        <div class="header__right-img">
             <img src="/img/texture/right texture.png" alt="">
         </div>
         <div class="container" id="action-video">
@@ -108,7 +115,7 @@
                         </div>
                     </a>
                     <div class="header__btn-inner text-center">
-                        <button class="btn shadow-none">
+                        <button id="myBtn" onclick="myFunction()" class="btn shadow-none">
                             <img class="play hvr-bob" src="/img/play.png" alt="">
                         </button>
                     </div>
@@ -116,10 +123,6 @@
             </div>
         </div>
     </header>
-
-
-
-
 
     <section class="work">
         <div class="work__item-1" id="works">
@@ -135,11 +138,12 @@
                     <span class="rus-text lang-hide">Немного о моих работах</span>
                 </div>
                 <div class="work__playlist-inner d-flex">
-                    <div class="work__play-list col-lg-6">
+                    <div class="work__play-list col-lg-6 wow animate__animated animate__fadeInBottomLeft"
+                        data-wow-delay="0.8s">
                         <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/978651526&color=%23673ab7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
                     </div>
-                    <div class="work__content-inner pl-5">
+                    <div class="work__content-inner pl-5 wow animate__animated animate__flipInX" data-wow-delay="0.8s">
                         <div class="work__suptitle-bg-element"></div>
                         <div class="work__suptitle">
                             <span class="eng-text">I can write different music.</span>
@@ -177,7 +181,7 @@
                     <img src="/img/texture/work-left-abstr-2.png" alt="">
                 </div>
                 <div class="work__playlist-inner d-flex">
-                    <div class="work__content-inner pl-5">
+                    <div class="work__content-inner pl-5 wow animate__animated animate__flipInX" data-wow-delay="0.8s">
                         <div class="work__suptitle-bg-element"></div>
                         <div class="work__suptitle">
                             <span class="eng-text">I can do styles.</span>
@@ -203,7 +207,8 @@
                             </a>
                         </div>
                     </div>
-                    <div class="work__play-list sort col-lg-6">
+                    <div class="work__play-list sort col-lg-6 wow animate__animated animate__fadeInBottomRight"
+                        data-wow-delay="0.8s">
                         <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/978651526&color=%23673ab7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
                     </div>
@@ -218,11 +223,12 @@
                     <img src="/img/texture/work-right-abstr-2.png" alt="">
                 </div>
                 <div class="work__playlist-inner d-flex">
-                    <div class="work__play-list col-lg-6">
+                    <div class="work__play-list col-lg-6 wow animate__animated animate__fadeInBottomLeft"
+                        data-wow-delay="0.8s">
                         <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/978651526&color=%23673ab7&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
                     </div>
-                    <div class="work__content-inner pl-5">
+                    <div class="work__content-inner pl-5 wow animate__animated animate__flipInX" data-wow-delay="0.8s">
                         <div class="work__suptitle-bg-element"></div>
                         <div class="work__suptitle">
                             <span class="eng-text">Moods and ideas drive the process.</span>
@@ -254,21 +260,109 @@
     </section>
 
 
+    <section class="album">
+        <div class="container">
+            <div class="work__title text-white">
+                <span class="eng-text">My releases</span>
+                <span class="rus-text lang-hide">Немного о моих работах</span>
+            </div>
+            <div class="work__playlist-inner d-flex align-items-center">
+                <div class="work__content-inner pl-5 wow animate__animated animate__flipInX" data-wow-delay="0.8s">
+                    <div class="work__suptitle-bg-element"></div>
+                    <div class="work__suptitle text-white">
+                        <span class="eng-text">New album!</span>
+                        <span class="rus-text lang-hide">Мои новый альбом</span>
+                    </div>
+                    <div class="work__text text-white">
+                        <span class="eng-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s.
+                        </span>
+                        <span class="rus-text lang-hide">
+                            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        </span>
+                    </div>
+                    <div class="work__img-inner d-flex align-items-center mt-3">
+                        <a href="#contacts">
+                            <button class="work__btn hvr-bob">
+                                <span class="eng-text">listen</span>
+                                <span class="rus-text lang-hide">слушать</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="work__play-list sort col-lg-6 pl-5 wow animate__animated animate__fadeInBottomRight">
+                    <img class="album__img" src="/img/album.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-
+    <section id="5" class="testimonials">
+        <div class="container">
+            <div class="work__title">
+                <span class="eng-text">My projects</span>
+                <span class="rus-text lang-hide">Мои проекты</span>
+            </div>
+            <div class="slider">
+                <div class="slider__item d-flex flex-column align-items-center col-lg-4 text-center">
+                    <a class="" href="#" target="_blank">
+                        <img src="/img/project.png" />
+                        <!-- <div class="slider__text">
+                            <span class="eng-text">test text</span>
+                            <span class="rus-text lang-hide">test text</span>
+                        </div> -->
+                        <div class="slider__autor">
+                            <span class="eng-text">«test project»</span>
+                            <span class="rus-text lang-hide">«test project»</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="slider__item d-flex flex-column align-items-center col-lg-4 text-center">
+                    <a class="" href="#" target="_blank">
+                        <img src="/img/project.png" />
+                        <div class="slider__autor">
+                            <span class="eng-text">«test project»</span>
+                            <span class="rus-text lang-hide">«test project»</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="slider__item d-flex flex-column align-items-center col-lg-4 text-center">
+                    <a class="" href="#" target="_blank">
+                        <img src="/img/project.png" />
+                        <div class="slider__autor">
+                            <span class="eng-text">«test project»</span>
+                            <span class="rus-text lang-hide">«test project»</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="slider__item d-flex flex-column align-items-center col-lg-4 text-center">
+                    <a class="" href="#" target="_blank">
+                        <img src="/img/project.png" />
+                        <div class="slider__autor">
+                            <span class="eng-text">«test project»</span>
+                            <span class="rus-text lang-hide">«test project»</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contacts" class="contacts">
         <div class="container">
-            <div class="contacts-texture">
+            <div class="contacts-texture wow animate__animated animate__rotateIn" data-wow-delay="2.5s">
                 <img src="/img/texture/contact-abstr.png" alt="">
             </div>
             <div class="work__title text-white"><span class="header__text-color">Say</span>hello</div>
             <div class="row">
-                <form enctype="multipart/form-data" method="post" class="col-lg-6" id="basic">
+                <form enctype="multipart/form-data" method="post"
+                    class="col-lg-6 wow animate__animated animate__fadeInBottomLeft" data-wow-delay="0.8s" id="basic">
                     <div class="input-inner">
                         <input name="email" type="email" id="InputEmail" placeholder="Type your mail.." required>
-                        <textarea name='text' id="InputText" class="mt-3" rows="5" cols="45" id='text'
+                        <textarea name='text' id="InputText" class="mt-3" rows="6" cols="45" id='text'
                             placeholder="Type your message.." required></textarea>
                         <button class="work__btn mt-3 hvr-bob">
                             <span class="eng-text">send</span>
@@ -276,7 +370,7 @@
                         </button>
                     </div>
                 </form>
-                <div class="contacts__inner col-lg-5">
+                <div class="contacts__inner col-lg-5 wow animate__animated animate__flipInX" data-wow-delay="0.8s">
                     <div class="contacts__text text-left">
                         <span class="eng-text">Write to me if you need an expert to create a sound picture and we will
                             make your projects better together.
@@ -286,37 +380,65 @@
                             звуковой картины и мы вместе сделаем ваши проекты лучше.</br>
                             Заполните эту форму или обратитесь в любой из указанных контактов :)
                         </span>
-
                     </div>
                     <a href="mailto:andriasbartlettpb@gmail.com">
                         <div class="contacts__mail pb-4"><span>test@gmail.com</span></div>
                     </a>
+                    <button class="work__btn work__btn_ghost hvr-bob" data-toggle="modal" data-target="#staticBackdrop"">
+                        <span class=" eng-text">To support me!</span>
+                        <span class="rus-text lang-hide">отправить</span>
+                    </button>
                     <div class="contacts__social-title">
                         <span class="eng-text">Follow me!</span>
                         <span class="rus-text lang-hide">Подпишись!</span>
                     </div>
-                    <div class="social-icons-inner col-lg-10 mt-2 d-flex justify-content-around">
-                        <a href="https://www.facebook.com/andriasbartlett" target="_blank"><img
-                                src="/img/icons/facebook-white.png" alt=""></a>
-                        <a href="https://www.youtube.com/c/BlackCatStudioMusic" target="_blank"><img
-                                src="/img/icons/youtube-white.png" alt=""></a>
-                        <a href="https://soundcloud.com/blackcatmusicstudio" target="_blank"><img
-                                src="/img/icons/soundcloud-white.png" alt=""></a>
-                        <a href="https://vk.com/blackcatmusicstudio" target="_blank"><img src="/img/icons/vk-white.png"
-                                alt=""></a>
+
+                    <div class="social-icons-inner col-lg-12 mt-2 d-flex">
+                        <a href="#" target="_blank"><span class="icon-facebook2"></span></a>
+                        <a href="#" target="_blank"><span class="icon-vk"></span></a>
+                        <a href="#" target="_blank"><span class="icon-youtube"></span></a>
+                        <a href="#" target="_blank"><span class="icon-soundcloud"></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Here you can support my work.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="donation-inner d-flex justify-content-around">
+                        <img class="donation-img" src="/img/icons/Patreon_Mark_Coral.jpg" alt="Patreon">
+                        <img class="donation-img" src="/img/icons/qiwi_sign_rgb.png" alt="Qiwi wallet">
+                        <img class="donation-img" src="/img/icons/yandex_dengi_product_icon_rgb.png" alt="Yandex Money">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         © 2020 Template by Timofey Mikutovsky. All rights reserved.
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script src="/js/video.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="/js/jquery-3.5.0.min.js"></script>
     <script src="/js/typed.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
 </body>
 
